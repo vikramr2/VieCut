@@ -34,13 +34,13 @@ class most_balanced_minimum_cut {
             exit(1);
         }
 
-        if (configuration::getConfig()->output_path != "")
-            configuration::getConfig()->set_node_in_cut = true;
+        // if (configuration::getConfig()->output_path != "")
+        configuration::getConfig()->set_node_in_cut = true;
 
         std::vector<std::pair<NodeID, EdgeID> > originalBestcutEdges;
 
         if (mincut == 0) {
-            LOG1 << "G has multiple connected components and mincut is 0.";
+            // LOG1 << "G has multiple connected components and mincut is 0.";
             return originalBestcutEdges;
         }
 
