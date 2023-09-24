@@ -39,10 +39,10 @@ class most_balanced_minimum_cut {
 
         std::vector<std::pair<NodeID, EdgeID> > originalBestcutEdges;
 
-        //if (mincut == 0) {
+        if (mincut == 0) {
             // LOG1 << "G has multiple connected components and mincut is 0.";
-            //return originalBestcutEdges;
-        //}
+            return originalBestcutEdges;
+        }
 
         balanced_cut_dfs dfs(original_graph, G, mincut);
         auto [n1, e1, n2, e2, bestcutInCycle] = dfs.runDFS();
